@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>PANADERIA LOS MORALES</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <main>
+        <header class="centro">
+        <img src="logo-1.png" width="75px" height="75px"><br>
+        <img src="logo-prin.png" width="500px" height="75px">
+        </header>
+        <nav>
+            <a class="active" style="margin-left: 10px;" href="home-admin.html">Home</a>
+            <a class="active" style="margin-left: 5px;" href="historial-admin.html">Historial</a>
+            <a class="active" style="margin-left: 800px;" href="home.html">Cerrar Sesión</a>
+        </nav>
+        <div>
+            <section>
+            <h1 class="h1-a">LISTA DE PRODUCTOS</h1> 
+            <div class="container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://cuk-it.com/wp-content/uploads/2021/07/donas-ig02.webp" width="45px"
+                                    height="300px" class="card-img-top" alt="Donas">
+                                <div class="card-body">
+                                    <h5 class="card-title">Donas</h5>
+                                    <p class="card-text">Deliciosas donas para disfrutar en cualquier momento.</p>
+                                    <form>
+                                        <button type="button" class="btn btn-primary editar-btn" data-producto="1">Editar</button>
+                                        <button type="button" class="btn btn-danger eliminar-btn" data-producto="1">Eliminar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://www.santa-lucia.ec/wp-content/uploads/2019/01/pan_dulce.jpg" width="45px"
+                                    height="300px" class="card-img-top" alt="Pan Dulce">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pan Dulce</h5>
+                                    <p class="card-text">Exquisito pan dulce, perfecto para acompañar tu desayuno.</p>
+                                    <form>
+                                        <button type="button" class="btn btn-primary editar-btn" data-producto="2">Editar</button>
+                                        <button type="button" class="btn btn-danger eliminar-btn" data-producto="2">Eliminar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://bafar.com/wp-content/uploads/2022/07/Bocadillos_tricolor_810x418.jpg"
+                                    width="45px" height="300px" class="card-img-top" alt="Bocadillos Tricolor">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bocadillos Tricolor</h5>
+                                    <p class="card-text">Deliciosos bocadillos tricolor para compartir con tus amigos.</p>
+                                    <form>
+                                        <button type="button" class="btn btn-primary editar-btn" data-producto="3">Editar</button>
+                                        <button type="button" class="btn btn-danger eliminar-btn" data-producto="3">Eliminar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                    var cantidadInputs = document.querySelectorAll('input[type="number"]');
+                    var editarBtns = document.querySelectorAll('.editar-btn');
+                    var eliminarBtns = document.querySelectorAll('.eliminar-btn');
+                
+                    cantidadInputs.forEach(function (input) {
+                        input.addEventListener('input', function () {
+                            var cantidad = parseInt(this.value);
+                            var productoId = this.id.slice(-1);
+                            var editarBtn = document.querySelector('.editar-btn[data-producto="' + productoId + '"]');
+                            var eliminarBtn = document.querySelector('.eliminar-btn[data-producto="' + productoId + '"]');
+                            if (cantidad > 0) {
+                                editarBtn.removeAttribute('disabled');
+                                eliminarBtn.removeAttribute('disabled');
+                            } else {
+                                editarBtn.setAttribute('disabled', 'disabled');
+                                eliminarBtn.setAttribute('disabled', 'disabled');
+                            }
+                        });
+                    });
+                
+                    editarBtns.forEach(function (btn) {
+                        btn.addEventListener('click', function () {
+                            var productoId = this.getAttribute('data-producto');
+                            window.location.href = 'editar-pro.html?id=' + productoId; // Redirige a editar-pro.html con el ID del producto
+                        });
+                    });
+                
+                    eliminarBtns.forEach(function (btn) {
+                        btn.addEventListener('click', function () {
+                            var productoId = this.getAttribute('data-producto');
+                            alert('Eliminar el producto ' + productoId);
+                        });
+                    });
+                </script>
+                
+          
+            </section>
+            <button onclick="agregarProducto()" class="btn btn-primary; btn-agregar-p" style="margin-left: 700px;"><b>Agregar Producto</b></button>
+            <script>
+                function agregarProducto() {
+                  window.location.href = 'agregar-p.html';
+                }
+            </script>
+        </div>
+
+
+        <footer >          
+            <a href="https://web.whatsapp.com/" style="margin-left: 1000px;font-size: 35px;">
+                ¿Necesitas ayuda? &nbsp;&nbsp;&nbsp;       
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png"
+                width="75px" height="75px">
+            </a>
+            <p style="color: white;font-size: 25px;">Todos los derechos reservados ©</p>
+        </footer>
+        </main>
+    </body>
+</html>

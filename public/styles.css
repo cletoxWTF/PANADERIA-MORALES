@@ -1,0 +1,221 @@
+@charset "ISO-8859-1";
+.btn-agregar-p{
+   background: rgb(247,246,149);
+   background: radial-gradient(circle, rgba(247,246,149,1) 0%, rgba(128,130,29,1) 100%);
+   border:1px solid #92860B;
+   color: black;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+}
+ 
+.btn-seleccionar-p{
+   background: rgb(247,246,149);
+   background: radial-gradient(circle, rgba(247,246,149,1) 0%, rgba(128,130,29,1) 100%);
+   border:1px solid #92860B;
+   color: black;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+}
+
+ .centro{
+   text-align: center;
+ }
+ 
+ .img-ini{
+	text-align: center;
+	margin: 20px 50px;
+ }
+ 
+.serizq{
+  	float: left;
+	margin: 10px 50px;
+}
+ 
+.serder{
+  	float: right;
+	margin: 10px 50px;
+}
+  
+ .imgRec-izq{
+	text-align: left;
+	margin: 10px 50px;
+ }
+ 
+ .imgRec-der{
+	text-align: right;
+	margin: 10px 50px;
+ }
+ 
+ .sec-derecha{
+ 	float:right;
+    margin: 10px 50px;
+ }
+
+.sec-izquierda{
+ 	float:left;
+   	margin: 10px 50px;
+ }
+ 
+.i-derecha{
+	float:right;
+    margin: 10px 150px;
+}
+
+.i-izquierda{
+	float:left;
+   	margin: 10px 150px;
+}
+
+ .derecha{
+   text-align: right;
+ }
+
+ .izquierda{
+   text-align: left;
+ }
+
+.ubi-page{
+   margin: 20px;
+   padding: 10px;
+   width: auto;
+   height: auto;
+   border: 1px;
+   float:left;
+	background-image: radial-gradient(circle at 62.28% 119.64%, 
+	#708500 0, #597d06 16.67%, #41710f 33.33%, #276413 50%, 
+	#065615 66.67%, #004a17 83.33%, #004019 100%);
+   align-items: center;
+}
+
+.transpar{
+   float: right;
+   background-color: #FAEE76;
+   filter:alpha(opacity=20);
+   -moz-opacity:0.2;
+   opacity: 0.8;
+   padding: 40px 20px;
+   margin: 10px 50px;
+   color: black;
+   font:bold 14px verdana;
+}
+
+.transpar2{
+   float: left;
+   background-color: #FAEE76;
+   filter:alpha(opacity=20);
+   -moz-opacity:0.2;
+   opacity: 0.8;
+   padding: 40px 20px;
+   margin: 10px 50px;
+   color: black;
+   font:bold 14px verdana;
+}
+
+.transpar3{
+   float:left;
+   background-color: #FAEE76;
+   filter:alpha(opacity=20);
+   -moz-opacity:0.2;
+   opacity: 0.8;
+   padding: 40px 20px;
+   margin: 10px 50px;
+   color: black;
+   font:bold 20px verdana;
+   margin-left: 475px;
+}
+
+.transpar4{
+   float: right;
+   background-color: #FAEE76;
+   filter:alpha(opacity=20);
+   -moz-opacity:0.2;
+   opacity: 0.8;
+   padding: 40px 20px;
+   margin: 10px 50px;
+   color: black;
+   font:bold 14px verdana;
+   border: 5px; 
+   border-color: black;
+}
+
+
+.h1-a{
+	   color: white;
+	   text-align:center;
+      font-style:italic;
+}
+
+
+/*BODY*/
+body{
+  background-image: url("https://img.freepik.com/fotos-premium/fondo-pasteleria-hd-8k-fondo-pantalla-imagen-fotografica-stock_915071-77870.jpg?w=740");
+}
+
+/*HEADER*/
+ header{
+   background: rgb(57,0,66);
+   background: linear-gradient(180deg, rgba(57,0,66,1) 0%, rgba(121,9,105,1) 35%, rgba(255,237,113,1) 100%);
+   padding: 20px 10px;
+  }
+
+/*NAV*/
+nav{
+
+   overflow: hidden;
+   background: rgb(96,53,0);
+   background: linear-gradient(180deg, rgba(96,53,0,1) 0%, rgba(140,59,1,1) 35%, rgba(184,137,56,1) 100%);
+   padding: 10px 5px;
+   font:bold 14px verdana;
+}  
+
+nav a {
+   float: left; 
+   color: black;
+   text-align: center;
+   padding: 12px;
+   text-decoration: underline;
+   font-size: 18px; 
+   line-height: 25px;
+   border-radius: 4px;
+}
+
+nav a.active {
+   background: rgb(247,246,149);
+   background: radial-gradient(circle, rgba(247,246,149,1) 0%, rgba(128,130,29,1) 100%);
+   border:1px solid #92860B;
+   color: black;
+}
+
+/*FOOTER*/
+footer {
+   overflow: hidden;
+   background: rgb(96,53,0);
+   background: linear-gradient(180deg, rgba(96,53,0,1) 0%, rgba(140,59,1,1) 35%, rgba(184,137,56,1) 100%);
+   padding: 20px 10px;
+   text-align: center;
+   clear:both;
+}
+
+footer li{
+   list-style: none;
+   font:bold 14px verdana;
+   padding: 10px;
+   display: inline-block;
+}
+footer a.active {
+	background-image: radial-gradient(circle at 62.28% -19.64%, #fff648 0, 
+	#e9e141 25%, #c7ca39 50%, #a7b332 75%, #8a9e2c 100%);
+   border:1px solid #92860B;
+   color: white;
+}
+footer a {
+   color: white;
+   text-align: center;
+   padding: 12px;
+   text-decoration: underline;
+   font-size: 18px; 
+   line-height: 25px;
+   border-radius: 4px;
+}

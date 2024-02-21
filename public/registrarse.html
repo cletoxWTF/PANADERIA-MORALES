@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>PANADERIA LOS MORALES</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <main>
+        <header class="centro">
+        <img src="logo-1.png" width="75px" height="75px"><br>
+        <img src="logo-prin.png" width="500px" height="75px">
+        </header>
+        <nav>
+            <a class="active" style="margin-left: 10px;" href="home.html">Home</a>
+            <a class="active" style="margin-left: 1200px;" href="iniciar-s.html">Iniciar Sesión</a>
+        </nav>
+        <div>
+            <section class="sec-izquierda" style="margin-left: 500px;">
+            <h1 class="h1-a" style="margin-left: 100px;">REGISTRAR CUENTA</h1>
+            <form action="home-user.html" style="font-size: 30px;">
+                <div>
+                    <label for="nombresApellidos">Nombres y Apellidos:</label>
+                    <input type="text" id="nombresApellidos" name="nombresApellidos" required>
+                </div>
+                <div>
+                    <label for="cedula">Cédula:</label>
+                    <input style="margin-left: 175px;" type="text" id="cedula" name="cedula" required>
+                </div>
+                <div>
+                    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                </div>
+                <div>
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div>
+                    <label for="telefono">Número Telefónico:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div>
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" required style="margin-left: 100px;">
+                    <button type="button" style="font-size: 20px;" id="togglePassword">Mostrar</button>
+                </div>
+                <button type="submit" style="font-size: 20px;padding:15px;margin-left: 150px;margin-top: 20px;">Crear cuenta</button>
+            </form>
+        
+            <script>
+                var togglePasswordButton = document.getElementById("togglePassword");
+                var passwordInput = document.getElementById("contrasena");
+        
+                togglePasswordButton.addEventListener("click", function () {
+                    if (passwordInput.type === "password") {
+                        passwordInput.type = "text";
+                        togglePasswordButton.textContent = "Ocultar";
+                    } else {
+                        passwordInput.type = "password";
+                        togglePasswordButton.textContent = "Mostrar";
+                    }
+                });
+            </script>
+            <a href="iniciar-s.html" style="color: white; font:bold 20px verdana; margin-left: 100px;margin-bottom: 20px;">¿Ya tiene cuenta? Inicia sesión aquí
+            </section>
+        </div>
+        <footer >          
+            <a href="https://web.whatsapp.com/" style="margin-left: 1000px;font-size: 35px;">
+                ¿Necesitas ayuda? &nbsp;&nbsp;&nbsp;       
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png"
+                width="75px" height="75px">
+            </a>
+            <p style="color: white;font-size: 25px;">Todos los derechos reservados ©</p>
+        </footer>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>PANADERIA LOS MORALES</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <main>
+        <header class="centro">
+        <img src="logo-1.png" width="75px" height="75px"><br>
+        <img src="logo-prin.png" width="500px" height="75px">
+        </header>
+        <nav>
+            <a class="active" style="margin-left: 10px;" href="home.html">Home</a>
+            <a class="active" style="margin-left: 1200px;" href="registrarse.html">Registrarse</a>
+        </nav>
+        <div>
+            <section class="sec-izquierda" style="margin-left: 500px;">
+            <h1 class="h1-a">INICIAR SESIÓN</h1>
+                <form style="font-size: 35px;">
+                    <div>
+                        <label for="usuario">Usuario/CI:</label>
+                        <input type="text" id="usuario" name="usuario" required>
+                    </div>
+                    <div>
+                        <label for="contrasena">Contraseña:</label>
+                        <input type="password" id="contrasena" name="contrasena" required>
+                        <button style="font-size: 20px;" type="button" id="togglePassword">Mostrar</button>
+                    </div>
+                    <button style="font-size: 20px;padding:15px;margin-left: 150px;margin-top: 20px;" type="submit">Iniciar Sesión</button>
+                </form>
+                <a href="registrarse.html" style="color: white; font:bold 20px verdana; margin-left: 100px;margin-bottom: 20px;"> ¿No tienes cuenta? Registrate Aquí
+                <script>
+                    var togglePasswordButton = document.getElementById("togglePassword");
+                    var passwordInput = document.getElementById("contrasena");
+            
+                    togglePasswordButton.addEventListener("click", function () {
+                        if (passwordInput.type === "password") {
+                            passwordInput.type = "text";
+                            togglePasswordButton.textContent = "Ocultar";
+                        } else {
+                            passwordInput.type = "password";
+                            togglePasswordButton.textContent = "Mostrar";
+                        }
+                    });
+                </script>
+            </section>
+        </div>
+        <footer>          
+            <a href="https://web.whatsapp.com/" style="margin-left: 800px;font-size: 35px;">
+                ¿Necesitas ayuda? &nbsp;&nbsp;&nbsp;       
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png"
+                width="75px" height="75px">
+            </a>
+            <p style="color: white;font-size: 25px;">Todos los derechos reservados ©</p>
+        </footer>
+        </main>
+    </body>
+</html>
